@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane alignment="center" hgap="10" prefHeight="400.0" prefWidth="600.0" vgap="10" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.growthrive.manager.AuthenticationManager">
+    <padding><Insets bottom="10" left="25" right="25" top="10" /></padding>
+
+    <!-- Image Section -->
+    <StackPane GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="0">
+        <ImageView fx:id="appIconView">
+            <fitWidth>100</fitWidth>
+            <preserveRatio>true</preserveRatio>
+        </ImageView>
+    </StackPane>
+
+    <Text text="Welcome, Please login to proceed" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="1" />
+
+    <Label text="User Name:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+    <TextField fx:id="usernameField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+    <Label text="Password:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+    <PasswordField fx:id="passwordField" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+
+    <HBox alignment="CENTER_RIGHT" GridPane.columnIndex="0" GridPane.rowIndex="4">
+        <Button fx:id="loginButton" alignment="CENTER" contentDisplay="CENTER" defaultButton="true" prefWidth="100" text="Login" textAlignment="CENTER" textOverrun="WORD_ELLIPSIS" underline="true" />
+    </HBox>
+
+    <Text fx:id="actiontarget" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+   <AmbientLight color="CHARTREUSE" lightOn="false" rotate="-14.0" />
+   <columnConstraints>
+      <ColumnConstraints />
+      <ColumnConstraints />
+      <ColumnConstraints />
+      <ColumnConstraints />
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+   </rowConstraints>
+</GridPane>

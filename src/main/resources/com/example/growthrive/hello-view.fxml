@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+
+<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.14-internal" fx:controller="com.example.growthrive.HelloController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <AmbientLight lightOn="true">
+      <color>
+         <Color red="0.4665265679359436" green="0.6973684430122375" blue="0.23568469285964966" />
+      </color>
+   </AmbientLight>
+   <AmbientLight color="CHARTREUSE" lightOn="true" onInputMethodTextChanged="#onHelloButtonClick" onKeyPressed="#onHelloButtonClick" onKeyReleased="#onHelloButtonClick" onKeyTyped="#onHelloButtonClick" onMouseDragExited="#onHelloButtonClick" onMouseDragOver="#onHelloButtonClick" onMouseDragReleased="#onHelloButtonClick" />
+
+    <Label fx:id="welcomeText" />
+    <Button onAction="#onHelloButtonClick" text="Hello!" />
+</VBox>

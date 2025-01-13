@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.growthrive.ui.DailyRoutineUIController"
+      spacing="10" alignment="CENTER" prefWidth="600" prefHeight="400">
+
+    <Label text="Daily Routine Tracker" style="-fx-font-size: 18px;"/>
+
+    <HBox spacing="10" alignment="CENTER">
+        <TextField fx:id="routineNameField" promptText="Routine Name"/>
+        <TextField fx:id="routineTimeField" promptText="Time (yyyy-MM-ddTHH:mm:ss)"/>
+        <Button text="Add Routine" fx:id="addRoutineButton" onAction="#addRoutine"/>
+    </HBox>
+
+    <ScrollPane prefHeight="250" fitToWidth="true">
+        <VBox fx:id="routineListContainer" spacing="10"/>
+    </ScrollPane>
+
+    <Label fx:id="gamificationScore" style="-fx-font-size: 16px;"/>
+
+</VBox>

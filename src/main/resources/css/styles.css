@@ -1,0 +1,19 @@
+.goal-button {
+    -fx-background-color: #4CAF50;
+    -fx-text-fill: white;
+}
+.routine-button {
+    -fx-background-color: #2196F3;
+    -fx-text-fill: white;
+}
+.health-button {
+    -fx-background-color: #FF5722;
+    -fx-text-fill: white;
+}
+
+
+.button {
+    -fx-background-color: red;
+    -fx-text-fill: white;
+}
+

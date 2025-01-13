@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane  xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.growthrive.ui.Dashboard">
+
+    <!-- Side Navigation Bar -->
+    <VBox layoutX="0.0" layoutY="0.0" prefHeight="800.0" prefWidth="200.0" style="-fx-background-color: #393053;">
+        <Label alignment="CENTER" style="-fx-font-size: 20px; -fx-text-fill: #FFFFFF;" text="GrowThrive" VBox.vgrow="NEVER" />
+        <Button prefWidth="200.0" style="-fx-background-color: transparent; -fx-text-fill: #FFFFFF;" text="Dashboard" onAction="#onClickList"  />
+        <Button prefWidth="200.0" style="-fx-background-color: transparent; -fx-text-fill: #FFFFFF;" text="Goal" onAction="#onClickList" />
+        <Button prefWidth="200.0" style="-fx-background-color: transparent; -fx-text-fill: #FFFFFF;" text="Routine" onAction="#onClickList" />
+        <Button prefWidth="200.0" style="-fx-background-color: transparent; -fx-text-fill: #FFFFFF;" text="Health" onAction="#onClickList"/>
+        <Button prefWidth="200.0" style="-fx-background-color: transparent; -fx-text-fill: #FFFFFF;" text="Settings" onAction="#onClickList" />
+        <Button prefWidth="200.0" style="-fx-background-color: transparent; -fx-text-fill: #FFFFFF;" text="SchedulerUI" onAction="#onClickList" />
+        <VBox.margin>
+            <Insets top="20.0" />
+        </VBox.margin>
+    </VBox>
+
+    <!-- Main Content Area -->
+    <AnchorPane layoutX="200.0" layoutY="0.0" prefHeight="1800.0" prefWidth="1000.0" style="-fx-background-color: #f4f4f4;" AnchorPane.leftAnchor="200.0">
+
+        <!-- Header Section -->
+        <HBox alignment="CENTER_LEFT" prefHeight="80.0" prefWidth="1000.0" style="-fx-background-color: #443C68;">
+            <Label style="-fx-font-size: 24px; -fx-text-fill: #FFFFFF;" text="Dashboard" />
+        </HBox>
+
+        <!-- Dashboard Content -->
+        <VBox layoutX="20.0" layoutY="100.0" spacing="20.0">
+            <HBox spacing="20.0">
+                <!-- Widget Placeholder 1 -->
+                <VBox prefHeight="200.0" prefWidth="300.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #635985; -fx-border-radius: 5;">
+                    <Label alignment="CENTER" style="-fx-font-size: 16px;" text="Bar Chart" />
+               <BarChart>
+                 <xAxis>
+                   <CategoryAxis side="BOTTOM" />
+                 </xAxis>
+                 <yAxis>
+                   <NumberAxis side="LEFT" />
+                 </yAxis>
+               </BarChart>
+                </VBox>
+
+                <!-- Widget Placeholder 2 -->
+                <VBox prefHeight="200.0" prefWidth="300.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #635985; -fx-border-radius: 5;">
+                    <Label alignment="CENTER" style="-fx-font-size: 16px;" text="Line Chart">
+                  <opaqueInsets>
+                     <Insets />
+                  </opaqueInsets></Label>
+               <LineChart fx:id="lineChart">
+                 <xAxis>
+                   <CategoryAxis side="BOTTOM" />
+                 </xAxis>
+                 <yAxis>
+                   <NumberAxis side="LEFT" />
+                 </yAxis>
+               </LineChart>
+                </VBox>
+
+                <!-- Widget Placeholder 4 -->
+                <VBox prefHeight="200.0" prefWidth="300.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #635985; -fx-border-radius: 5;">
+                    <Label alignment="CENTER" style="-fx-font-size: 16px;" text="Heatmap" />
+                </VBox>
+            </HBox>
+            <HBox spacing="20.0">
+                <!-- Widget Placeholder 3 -->
+                <VBox prefHeight="200.0" prefWidth="300.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #635985; -fx-border-radius: 5;">
+                    <Label alignment="CENTER" style="-fx-font-size: 16px;" text="Pie Chart" />
+               <PieChart fx:id="pieChart" />
+                </VBox>
+
+                <!-- Widget Placeholder 4 -->
+                <VBox prefHeight="200.0" prefWidth="300.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #635985; -fx-border-radius: 5;">
+                    <Label alignment="CENTER" style="-fx-font-size: 16px;" text="Heatmap" />
+                </VBox>
+
+                <!-- Widget Placeholder 4 -->
+                <VBox prefHeight="200.0" prefWidth="300.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #635985; -fx-border-radius: 5;">
+                    <Label alignment="CENTER" style="-fx-font-size: 16px;" text="Heatmap" />
+                </VBox>
+            </HBox>
+        </VBox>
+    </AnchorPane>
+</AnchorPane>

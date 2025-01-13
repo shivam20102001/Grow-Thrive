@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.collections.FXCollections?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.growthrive.controllers.GoalController"
+            prefHeight="400.0" prefWidth="600.0">
+
+    <VBox spacing="10" layoutX="20" layoutY="20">
+        <Label text="Set Goal" style="-fx-font-size: 16px; -fx-font-weight: bold;" />
+
+        <TextField fx:id="goalNameField" promptText="Goal Name" />
+        <TextField fx:id="descriptionField" promptText="Description" />
+        <DatePicker fx:id="startDatePicker" promptText="Start Date" />
+        <DatePicker fx:id="endDatePicker" promptText="End Date" />
+
+        <HBox spacing="10">
+            <Label text="Type:" />
+            <ChoiceBox fx:id="goalTypeChoiceBox">
+                <items>
+                    <FXCollections fx:factory="observableArrayList">
+                        <String fx:value="Individual" />
+                        <String fx:value="Group" />
+                    </FXCollections>
+                </items>
+            </ChoiceBox>
+        </HBox>
+
+        <TextField fx:id="groupNameField" promptText="Group Name (Optional)" />
+
+        <Button text="Add Goal" fx:id="addGoalButton" onAction="#handleAddGoal" />
+
+        <TableView fx:id="goalsTable" prefHeight="200.0">
+            <columns>
+                <TableColumn text="Name" fx:id="goalNameColumn" />
+                <TableColumn text="Description" fx:id="descriptionColumn" />
+                <TableColumn text="Start Date" fx:id="startDateColumn" />
+                <TableColumn text="End Date" fx:id="endDateColumn" />
+                <TableColumn text="Completed" fx:id="isCompletedColumn" />
+                <TableColumn text="Points" fx:id="pointsColumn" />
+            </columns>
+        </TableView>
+
+        <Button text="Mark Complete" fx:id="markCompleteButton" onAction="#handleMarkComplete" />
+    </VBox>
+</AnchorPane>

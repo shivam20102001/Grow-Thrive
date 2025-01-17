@@ -15,6 +15,11 @@ module com.example.growthrive {
     requires spring.context;
     requires spring.boot;
     requires lombok;
+    requires spring.data.jpa;
+    requires jakarta.persistence;
+    requires spring.beans;
+    requires spring.tx;
+    requires com.h2database;
 
     // Open the 'manager' package to JavaFX for reflective access
     opens com.example.growthrive to javafx.fxml;
@@ -24,4 +29,13 @@ module com.example.growthrive {
 
     exports com.example.growthrive;
     exports com.example.growthrive.manager;
+    exports com.example.growthrive.services;
+    exports com.example.growthrive.repository;
+    exports com.example.growthrive.domain;
+
+
+    opens com.example.growthrive.domain to spring.core, spring.beans, spring.data.jpa;
+    opens com.example.growthrive.repository to spring.core, spring.beans, spring.data.jpa;
+
+
 }

@@ -5,17 +5,17 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane  xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.growthrive.ui.Dashboard">
+<AnchorPane xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.growthrive.ui.Dashboard">
 
     <!-- Side Navigation Bar -->
     <VBox layoutX="0.0" layoutY="0.0" prefHeight="800.0" prefWidth="200.0" style="-fx-background-color: #393053;">
         <Label alignment="CENTER" style="-fx-font-size: 20px; -fx-text-fill: #FFFFFF;" text="GrowThrive" VBox.vgrow="NEVER" />
-        <Button prefWidth="200.0" style="-fx-background-color: transparent; -fx-text-fill: #FFFFFF;" text="Dashboard" onAction="#onClickList"  />
-        <Button prefWidth="200.0" style="-fx-background-color: transparent; -fx-text-fill: #FFFFFF;" text="Goal" onAction="#onClickList" />
-        <Button prefWidth="200.0" style="-fx-background-color: transparent; -fx-text-fill: #FFFFFF;" text="Routine" onAction="#onClickList" />
-        <Button prefWidth="200.0" style="-fx-background-color: transparent; -fx-text-fill: #FFFFFF;" text="Health" onAction="#onClickList"/>
-        <Button prefWidth="200.0" style="-fx-background-color: transparent; -fx-text-fill: #FFFFFF;" text="Settings" onAction="#onClickList" />
-        <Button prefWidth="200.0" style="-fx-background-color: transparent; -fx-text-fill: #FFFFFF;" text="SchedulerUI" onAction="#onClickList" />
+        <Button onAction="#onClickList" prefWidth="200.0" style="-fx-background-color: transparent; -fx-text-fill: #FFFFFF;" text="Dashboard" />
+        <Button onAction="#onClickList" prefWidth="200.0" style="-fx-background-color: transparent; -fx-text-fill: #FFFFFF;" text="Goal" />
+        <Button onAction="#onClickList" prefWidth="200.0" style="-fx-background-color: transparent; -fx-text-fill: #FFFFFF;" text="Routine" />
+        <Button onAction="#onClickList" prefWidth="200.0" style="-fx-background-color: transparent; -fx-text-fill: #FFFFFF;" text="Health" />
+        <Button onAction="#onClickList" prefWidth="200.0" style="-fx-background-color: transparent; -fx-text-fill: #FFFFFF;" text="Settings" />
+        <Button onAction="#onClickList" prefWidth="200.0" style="-fx-background-color: transparent; -fx-text-fill: #FFFFFF;" text="SchedulerUI" />
         <VBox.margin>
             <Insets top="20.0" />
         </VBox.margin>
@@ -27,6 +27,8 @@
         <!-- Header Section -->
         <HBox alignment="CENTER_LEFT" prefHeight="80.0" prefWidth="1000.0" style="-fx-background-color: #443C68;">
             <Label style="-fx-font-size: 24px; -fx-text-fill: #FFFFFF;" text="Dashboard" />
+         <Label style="-fx-font-size: 24px; -fx-text-fill: #FFFFFF;" alignment="CENTER_RIGHT" text="username" />
+
         </HBox>
 
         <!-- Dashboard Content -->

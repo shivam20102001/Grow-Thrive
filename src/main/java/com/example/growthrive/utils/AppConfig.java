@@ -24,6 +24,18 @@ public class AppConfig {
         return properties.getProperty(key, defaultValue);
     }
 
+    public String getDBUrl(){
+        return getProperty("spring.datasource.url");
+    }
+
+    public String getDBUsername(){
+        return getProperty("spring.datasource.username");
+    }
+
+    public String getDBPassword(){
+        return getProperty("spring.datasource.password");
+    }
+
     public String getAppIcon(){
         return getProperty("app.icon", "/icons/default-icon.png");
     }

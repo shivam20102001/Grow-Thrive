@@ -9,11 +9,10 @@ import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
-import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.scheduling.annotation.EnableAsync;
 import org.springframework.scheduling.annotation.EnableScheduling;
 
@@ -21,19 +20,29 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
 
-//@Configuration(proxyBeanMethods=false)
+@Configuration(proxyBeanMethods=false)
 @SpringBootApplication
 @EnableConfigurationProperties(MyConfigProperties.class)
+@EnableJpaRepositories
 @EnableScheduling
-//@EnableAsync
+@EnableAsync
 public class GrowThriveApp extends Application {
+//
+//    @Override
+//    public void init() throws Exception {
+//        SpringApplicationBuilder builder = new
+//                SpringApplicationBuilder(GrowThriveApp.class);
+//        builder.application()
+//                .setWebApplicationType(WebApplicationType.NONE);
+//
+//    }
 
     @Override
     public void start(Stage primaryStage) throws IOException {
 
         AppConfig appConfig = new AppConfig();
 
-        DatabaseInitializer dbinit = new DatabaseInitializer();
+//        DatabaseInitializer dbinit = new DatabaseInitializer();
         DatabaseInitializer.initializeDatabase();
 
         // Load application properties
@@ -62,8 +71,8 @@ public class GrowThriveApp extends Application {
 //        primaryStage.setHeight(400);
 
         // Your UI logic here
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("AuthenticationManager.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 400, 300);
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("GamingDashboard.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), 800, 600);
 
         // Add the CSS file to the Scene
         scene.getStylesheets().add(getClass().getResource("styles.css").toExternalForm());
@@ -91,8 +100,8 @@ public class GrowThriveApp extends Application {
     }
 
     public static void main(String[] args) {
-
 //        SpringApplication.run(GrowThriveApp.class, args);
         launch();
+
     }
 }

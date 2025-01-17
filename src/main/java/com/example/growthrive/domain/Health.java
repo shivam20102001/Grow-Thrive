@@ -1,5 +1,10 @@
 package com.example.growthrive.domain;
 
+import jakarta.persistence.Entity;
+import lombok.Data;
+
+@Data
+@Entity
 public class Health {
     private int waterIntake;  // in milliliters
     private int screenTime;   // in minutes

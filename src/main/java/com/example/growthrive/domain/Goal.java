@@ -1,17 +1,18 @@
 package com.example.growthrive.domain;
 
+import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
+
 import java.time.LocalDate;
 
+
+@Entity
+@AllArgsConstructor
+@NoArgsConstructor
 public class Goal {
+
     public Goal(String name, String description) {
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public String getName() {
@@ -70,7 +71,10 @@ public class Goal {
         this.points = points;
     }
 
-    private int id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @Column(name = "id", nullable = false)
+    private Long id;
     private String name;
     private String description;
     private LocalDate startDate;
@@ -78,4 +82,12 @@ public class Goal {
     private boolean isCompleted;
     private String groupName;
     private int points;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
 }

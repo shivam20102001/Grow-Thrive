@@ -1,0 +1,31 @@
+1.Goals
+     Test cases:
+     Goals completed on time ( got some points )
+     Check the goal is on time or not on each update by users
+
+ Routines
+       Features:
+       you can set the daily task : like ( wake up early morning , take shower, brush, running etc)
+       some task can be not only daily basis ( exercise , shampooing, cleaning, washing, etc
+       some task can be weekly like (cutting, nail cut etc)
+       some task can be monthly basis ( traveling )
+       some task can be querterly ( shopping )
+       some task can be yearly ( something may came here )
+       some can be on specific day , or on specific count
+       some task can be hourly basis ( drinking , mind fresh,break time  etc)
+
+ special features
+
+ we are gamifying these things so successfully completing the task he or she will got points
+ can also analyse the progress using graphs and charts
+ track the performance
+ color enlightment
+ notification system
+ strict tasks
+ awsome ui
+
+
+
+
+
+
